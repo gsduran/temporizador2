@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" v-cloak class="text-center">
+        <h1 class="text-center">Tiempo megapro 100 porciento real no faik 1link x mega</h1>
+        <timer-setup v-if="!time" @set-time="setTime"></timer-setup>
+         <div v-else>
+             <timer :time="prettyTime"></timer>
+             <div>
+                  <button v-if="!isRunning" @click="start">dale</button>
+                  <button v-if="isRunning" @click="stop">para</button>
+                  <button @click="reset">resetea loco</button>
+             </div>
+        </div>
+        <img id="img1" src="marcianito.gif" alt="">       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="02.js"></script>
+</body>
+</html>
